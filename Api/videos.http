@@ -1,0 +1,30 @@
+@api = http://localhost:5000
+
+GET {{api}}/videos HTTP/1.1
+
+
+###
+GET {{api}}/videos/6167895330bfc296020f2a02 HTTP/1.1
+
+### Create a video
+POST {{api}}/videos HTTP/1.1
+Content-Type: application/json
+
+
+{
+    "url":"https://www.youtube.com/watch?v=8mCCMhuKEYw&list=RD8mCCMhuKEYw&start_radio=1&ab_channel=JasonMraz",
+    "title":"Json mars",
+    "description":"Im yours"
+
+}
+###
+
+DELETE {{api}}/videos/6167895330bfc296020f2a02 HTTP/1.1
+
+###
+PUT {{api}}/videos/616790099cfa50272dc0bb65 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title":"jarb & yani favorites"
+}
